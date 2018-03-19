@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 20180319150819) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "items", force: :cascade do |t|
+    t.string "type"
+    t.boolean "availability"
+    t.integer "price_per_day"
+    t.text "description"
+    t.boolean "status"
+    t.integer "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_items_on_owner_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
