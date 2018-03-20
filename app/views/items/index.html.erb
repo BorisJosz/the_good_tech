@@ -2,9 +2,14 @@
 <p>Find me in app/views/items/index.html.erb</p>
 
 
-<% Item.categories.each do |c| %>
-<ul>
-<li><%= c %></li>
-</ul>
+<% @categories.each do |category| %>
+<%= link_to category, root_path(query: category) %>
 <% end %>
 
+<% unless params[:query].nil? %>
+  <% @items.each do |item| %>
+  <ul>
+    <li>Description = <%= item.description %></li>
+  </ul>
+  <% end %>
+<% end %>
