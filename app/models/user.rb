@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :items, foreign_key: :owner_id
   validates :name, presence: true
+  has_many :bookings
 end

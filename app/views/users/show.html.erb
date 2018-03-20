@@ -1,2 +1,14 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Hello <%= @user.name %>, this is your dashboard</h1>
+
+<h3>Here are your bookings</h3>
+
+
+<% @bookings.each do |b| %>
+<ul>
+<li><%= b.item.category %></li>
+</ul>
+<% end %>
+
+
+
+
