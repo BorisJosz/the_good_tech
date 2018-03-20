@@ -4,8 +4,8 @@ class BookingsController < ApplicationController
   end
 
   def show
-    # @item = Item.find(params[:item_id])
-    # @item.user = current_user
+    @user = current_user
+    @booking = Booking.find(params[:id])
 
   end
 

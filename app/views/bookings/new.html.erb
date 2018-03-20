@@ -1,3 +1,14 @@
 <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p>
+<ul>
+<li><%= @item.category %></li>
+<li><%= @item.description %></li>
+<li><%= @item.address %></li>
+</ul>
+<br>
+<br>
+<br>
+<%= simple_form_for [@item, @booking] do |f| %>
 
+  <%= f.submit "Confirm booking", class: "btn btn-primary" %>
+<% end %>
