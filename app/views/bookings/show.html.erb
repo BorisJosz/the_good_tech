@@ -1,9 +1,21 @@
 <h1>OMG you made a booking!</h1>
 
-
-<%= @booking.item.description %>
-<%= @booking.user.name %>
-<%= @booking.item.owner.name %>
-
+<ul>
+<li><%= @booking.item.description %></li>
+<li><%= @booking.user.name %></li>
+<li><%= @booking.item.owner.name %></li>
+<li><%= @booking.item.price_per_day %> €</li>
+</ul>
 <%= link_to "go to my dashboard", user_path(@user) %>
+<br>
+<br>
+<%= link_to "leave a review", new_user_booking_review_path(@user, @booking) %>
+<br>
+<h2>Your review for this product</h2>
+<% @booking.reviews.each do |review| %>
+<ul class = "list-inline">
+<li> <%= review.stars %> </li>
+<li> <%= review.description %> </li>
+</ul>
+<% end %>
 

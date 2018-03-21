@@ -8,6 +8,12 @@
     <li>description: <%= @item.description %></li>
     <li>address: <%= @item.address %></li>
     <li><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %></li>
+    <p>Reviews: </p>
+    <% @bookings.each do |booking|  %>
+      <li><% booking.reviews.each do |review| %>
+        <li><%= review.description %></li>
+      <% end %>
+    <% end %>
   </ul>
   <br>
   <br>
