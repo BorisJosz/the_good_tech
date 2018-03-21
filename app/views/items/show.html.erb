@@ -1,10 +1,10 @@
 <br>
 <div class="container show">
-<p>Overview of the item</p>
+  <p>Overview of the item</p>
 
   <div class="card">
-
-    <div class="cardpicture"><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %></div>
+    <div class="cardpicture"><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %>
+    </div>
 
     <div class="cardinfo">
       <h4><b>Object description</b></h4>
@@ -15,11 +15,12 @@
       </div>
     </div>
   </div>
-</div>
-
-   <p>Reviews: </p>
-    <% @bookings.each do |booking|  %>
-      <li><% booking.reviews.each do |review| %>
+   <p>Reviews</p>
+    <div class="cardreview">
+      <% @bookings.each do |booking|  %>
+      <% booking.reviews.each do |review| %>
         <li><%= review.description %></li>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+</div>
