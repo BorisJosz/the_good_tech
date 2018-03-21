@@ -1,0 +1,28 @@
+.subnavbar-wagon {
+  background: white;
+  transition: all 0.3s ease;
+  height: 54px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 54px; /* Hide the navbar x px outside of the top view */
+  width: 100%;
+}
+
+.subnavbar-wagon-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.subnavbar-wagon-link {
+  color: #616668;
+  font-size: 14px;
+}
+
+.subnavbar-wagon-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
