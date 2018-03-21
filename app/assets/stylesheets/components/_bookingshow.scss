@@ -1,0 +1,32 @@
+.container-booking-show {
+  width: 700px;
+  margin : 0 auto;
+
+}
+
+.booking-details {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #032a33;
+  color : white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.booking-picture {
+  display: flex;
+  border: 3px solid white;
+}
+
+.booking-text {
+  display: flex;
+
+}
+
+.call2action {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
