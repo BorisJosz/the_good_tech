@@ -16,14 +16,18 @@
   </div>
 </div>
 
-    <p>Reviews: </p>
+
+   <p>Reviews: </p>
+
     <% @bookings.each do |booking|  %>
       <li><% booking.reviews.each do |review| %>
         <li><%= review.description %></li>
       <% end %>
     <% end %>
+
   </ul>
   <br>
   <br>
   <%= link_to "book this item", new_item_booking_path(@item)  %>
 </p>
+
