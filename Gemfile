@@ -3,6 +3,7 @@ ruby '2.4.3'
 
 gem 'devise'
 
+gem "geocoder"
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -19,6 +20,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem "geocoder"
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
