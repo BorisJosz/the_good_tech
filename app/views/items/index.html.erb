@@ -1,22 +1,37 @@
 <h1>These are our categories</h1>
 
 
-<% @categories.each do |category| %>
-<%= link_to category, root_path(filter: category) %>
-<% end %>
+<div class="categories container">
+  <div class="row">
+    <% @categories.each do |category| %>
+
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <div class="category-card">
+       <div>
+        <%= link_to category, root_path(filter: category), class: "category-link" %>
+      </div>
+      <div>
+        <%= image_tag ("#{category}.png"), class: "category-img" %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+</div>
+</div>
 
 <% unless params[:filter].nil? %>
-  <% @items.each do |item| %>
-  <ul>
-    <a><%= link_to item_path(item) do %>
-     <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
-     <li><%= item.category %></li>
-    <li>Description = <%= item.description %></li>
-     <% end %>
+<% @items.each do |item| %>
+<ul>
+  <a><%= link_to item_path(item) do %>
+   <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
+   <li><%= item.category %></li>
+   <li>Description = <%= item.description %></li>
+   <% end %>
 
-  </a>
-    <br>
-    <br>
-  </ul>
-  <% end %>
+ </a>
+ <br>
+ <br>
+</ul>
+<% end %>
 <% end %>
