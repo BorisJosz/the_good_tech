@@ -18,8 +18,8 @@
    <p>Reviews</p>
     <div class="cardreview">
       <% @bookings.each do |booking|  %>
-        <li><% booking.reviews.each do |review| %>
-          <li><%= review.description %></li>
+      <% booking.reviews.each do |review| %>
+        <li><%= review.description %></li>
         <% end %>
       <% end %>
     </div>
