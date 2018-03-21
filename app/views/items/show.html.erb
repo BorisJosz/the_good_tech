@@ -19,9 +19,7 @@
     <div class="cardreview">
       <% @bookings.each do |booking|  %>
         <li><% booking.reviews.each do |review| %>
-        <el class="cardreview">
           <li><%= review.description %></li>
-        </el>
         <% end %>
       <% end %>
     </div>
