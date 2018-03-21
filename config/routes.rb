@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :items do
-    resources :reviews, only: [:index]
     resources :bookings, only: [:new, :create]
   end
 

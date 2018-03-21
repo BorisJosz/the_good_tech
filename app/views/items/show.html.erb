@@ -16,3 +16,10 @@
     </div>
   </div>
 </div>
+
+   <p>Reviews: </p>
+    <% @bookings.each do |booking|  %>
+      <li><% booking.reviews.each do |review| %>
+        <li><%= review.description %></li>
+      <% end %>
+    <% end %>
