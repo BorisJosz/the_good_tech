@@ -3,10 +3,9 @@
 <p>Overview of the item</p>
 
   <div class="card">
+  <div class="cardpicture"><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %></div>
 
-    <div class="cardpicture"><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %></div>
-
-    <div class="cardinfo">
+  <div class="cardinfo">
       <h4><b>Object description</b></h4>
       <p><b>Category</b> <%= @item.category %></p>
       <p><b>Description</b> <%= @item.description %></p>
@@ -16,3 +15,15 @@
     </div>
   </div>
 </div>
+
+    <p>Reviews: </p>
+    <% @bookings.each do |booking|  %>
+      <li><% booking.reviews.each do |review| %>
+        <li><%= review.description %></li>
+      <% end %>
+    <% end %>
+  </ul>
+  <br>
+  <br>
+  <%= link_to "book this item", new_item_booking_path(@item)  %>
+</p>

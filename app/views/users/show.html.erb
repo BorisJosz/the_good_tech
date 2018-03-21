@@ -15,14 +15,15 @@
 
 <h3>Here are your bookings</h3>
 
-
 <% @bookings.each do |booking| %>
+<%= link_to user_booking_path(@user, @booking) do %>
+
 <ul>
 <li><%= booking.item.category %></li>
+<li><%= booking.item.description %></li>
 </ul>
 <% end %>
-
-
+<% end %>
 
 
 
