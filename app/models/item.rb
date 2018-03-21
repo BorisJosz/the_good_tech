@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   validates :description,   presence: true
   validates :photo,         presence: true
 
-  CATEGORIES = ["drill", "camera", "drone", "TV", "cat"]
+  CATEGORIES = ["computers", "cameras", "drones", "Televisions", "sound equipment", "smartphones"]
 
   def self.categories
     CATEGORIES
