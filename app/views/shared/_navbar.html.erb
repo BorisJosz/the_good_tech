@@ -10,9 +10,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <!--   <%= link_to "Rentals", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My reservations", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Reviews", "#", class: "navbar-wagon-item navbar-wagon-link" %> -->
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -43,6 +43,7 @@
     <% end %>
   </div>
 
+
   <!-- Dropdown list appearing on mobile only -->
   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
@@ -54,4 +55,6 @@
       </ul>
     </div>
   </div>
+
+
 </div>
