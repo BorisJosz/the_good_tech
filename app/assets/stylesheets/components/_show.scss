@@ -1,0 +1,25 @@
+// Import your components CSS files here.
+@import "alert";
+@import "navbar";
+@import "subnavbar";
+@import "footer";
+
+.container_show {
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    // transition: 0.3s;
+    border-radius: 5px;
+  }
+
+.cardpicture {
+    flex: 0 0 40%;
+}
+
+.cardinfo {
+    flex: 0 0 40%;
+}
