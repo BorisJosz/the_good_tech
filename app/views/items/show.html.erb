@@ -1,0 +1,17 @@
+
+<p>Overview of the item</p>
+
+
+<p>
+  <ul>
+    <li>category: <%= @item.category %></li>
+    <li>description: <%= @item.description %></li>
+    <li>address: <%= @item.address %></li>
+    <li><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %></li>
+  </ul>
+  <br>
+  <br>
+  <%= link_to "book this item", new_item_booking_path(@item)  %>
+</p>
+
+

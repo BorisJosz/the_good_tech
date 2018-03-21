@@ -1,0 +1,29 @@
+<h1>Hello <%= @user.name %>, this is your dashboard</h1>
+
+<h3>Here are your items</h3>
+
+
+<% @items.each do |item| %>
+<ul class="list-inline">
+<li><%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %></li>
+<li><%= item.category %></li>
+<li><%= item.description %></li>
+
+</ul>
+<% end %>
+<%= link_to "Have stuff to rent?", new_item_path %>
+
+<h3>Here are your bookings</h3>
+
+
+<% @bookings.each do |booking| %>
+<ul>
+<li><%= booking.item.category %></li>
+</ul>
+<% end %>
+
+
+
+
+
+

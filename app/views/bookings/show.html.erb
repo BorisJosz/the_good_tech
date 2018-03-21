@@ -1,0 +1,9 @@
+<h1>OMG you made a booking!</h1>
+
+
+<%= @booking.item.description %>
+<%= @booking.user.name %>
+<%= @booking.item.owner.name %>
+
+<%= link_to "go to my dashboard", user_path(@user) %>
+
