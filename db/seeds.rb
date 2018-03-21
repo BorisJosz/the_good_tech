@@ -5,3 +5,40 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+10.times do
+ user  = User.all.sample
+Item.create!(
+  { owner: user,
+    category: "computers",
+    description: Faker::Lorem.sentence(3),
+    price_per_day: Faker::Number.number(2).to_i,
+    address: Faker::Address.street_address,
+    remote_photo_url: "https://picsum.photos/200/300/?random"
+    })
+end
+
+10.times do
+ user  = User.all.sample
+Item.create!(
+  { owner: user,
+    category: "cameras",
+    description: Faker::Lorem.sentence(3),
+    price_per_day: Faker::Number.number(2).to_i,
+    address: Faker::Address.street_address,
+    remote_photo_url: "https://picsum.photos/200/300/?random"
+    })
+end
+
+10.times do
+ user  = User.all.sample
+Item.create!(
+  { owner: user,
+    category: "drones",
+    description: Faker::Lorem.sentence(3),
+    price_per_day: Faker::Number.number(2).to_i,
+    address: Faker::Address.street_address,
+    remote_photo_url: "https://picsum.photos/200/300/?random"
+    })
+end
