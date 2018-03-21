@@ -2,8 +2,8 @@ class ItemsController < ApplicationController
   before_action :set_item, except: [:index, :new, :create]
 
   def index
-    unless params[:query].nil?
-       @items = Item.where(category: params[:query])
+    unless params[:filter].nil?
+       @items = Item.where(category: params[:filter])
     else
        @items = Item.all
     end
