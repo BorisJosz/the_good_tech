@@ -1,5 +1,5 @@
 
-<div class="banner" >
+<div class="banner slideLeft" >
 
   <div class="banner-content">
     <br>
@@ -30,24 +30,22 @@
 </div>
 
 <div class="row">
-
   <% unless params[:filter].nil? %>
-  <% @items.each do |item| %>
-  <%= link_to item_path(item) do %>
+    <% @items.each do |item| %>
+      <%= link_to item_path(item) do %>
 
-<div class="col-xs-12 col-sm-3">
-  <div class="card indexcard">
-    <div>
-      <%= cl_image_tag item.photo, class:"indeximage" %>
-    </div>
-    <div class = "text-center">
-    <h5 class= "indexlink"><%= item.title.upcase %></h5>
-    <p class= "indexlink"><%= item.description %></p>
-    </div>
- </div>
-</div>
-<% end %>
-   <% end %>
-
+        <div class="col-xs-12 col-sm-3">
+          <div class="card indexcard">
+            <div>
+              <%= cl_image_tag item.photo, class:"indeximage" %>
+            </div>
+            <div class = "text-center">
+              <h5 class= "indexlink"><%= item.title.upcase %></h5>
+              <p class= "indexlink"><%= item.description %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
 </div>
