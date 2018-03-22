@@ -3,13 +3,12 @@ class ItemsController < ApplicationController
 
   def index
     unless params[:filter].nil?
-       @items = Item.where(category: params[:filter])
+      @items = Item.where(category: params[:filter].downcase)
+      p @items
     else
-       @items = Item.all
+      @items = Item.all
     end
-
-
-    @categories = @items.categories
+      @categories = Item.categories
   end
 
   def new
@@ -27,7 +26,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @bookings = @item.bookings
   end
 
