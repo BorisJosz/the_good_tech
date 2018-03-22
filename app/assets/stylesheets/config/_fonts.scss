@@ -1,10 +1,18 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Oswald:200,300,400');
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Oswald:200,300,400');
+
+// to use for long text (item description)
+@import url('https://fonts.googleapis.com/css?family=Fjord+One');
+// CSS rules --> font-family: 'Fjord One', serif;
+// for titles and the rest
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+// CSS rules --> font-family: 'Crimson Text', serif;
+
 
 // Define fonts for body and headers
-$body-font: 'Merriweather', serif;
-$headers-font: 'Oswald', sans-serif;
+$body-font: 'Fjord One', serif;
+$headers-font: 'Crimson Text', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
