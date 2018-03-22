@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
-  belongs_to :owner, class_name: 'User'
+  belongs_to :owner, class_name: 'User', optional: true
   has_many :bookings
 
   validates :category,      presence: true

@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :items, foreign_key: :owner_id
   validates :name, presence: true
   has_many :bookings
+  mount_uploader :photo, PhotoUploader
 end
