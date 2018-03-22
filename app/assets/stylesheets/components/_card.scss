@@ -41,8 +41,47 @@
   color: black;
 }
 
-.cardpicture {
+.bookingimage {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
+.bookingboxleft {
+  flex: 1 1 40%;
+  border-right: 1px solid black;
+}
+
+.bookingboxright {
+  flex: 1 1 60%;
+}
+
+.bookingbuttonsflex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bookingsubcard {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.bookingsubcard:last-child {
+  border-bottom: 1px solid white;
+}
+
+.reviewcard {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+
+
+.dashboardcard
+{ margin-top: 20px;
+  padding: 20px;
 }
 
 .cardreview {
@@ -50,3 +89,15 @@
   padding: 10px;
 }
 
+.bookingsubone {
+  flex: 1 0 15%;
+}
+
+.bookingsubtwo {
+  flex: 1 0 65%;
+  padding-left: 25px;
+}
+
+.bookingsubthree {
+  flex: 1 0 20%;
+}

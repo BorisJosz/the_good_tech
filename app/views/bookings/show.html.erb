@@ -1,27 +1,41 @@
-<div class="container-booking-show">
-  <h3>"<%= @booking.user.name %>", here are the details of your booking :</h3>
-  <div class="booking-details">
-    <div class="booking-picture">
-      <%= cl_image_tag @booking.item.photo, height: 150, width: 200, crop: :fill %>
-    </div>
-    <div class="booking-text">
-      <ul>
-        <li><%= @booking.item.description %></li>
-        <li><%= @booking.item.price_per_day %>€</li>
-        <li><p>contact person : <%= @booking.item.owner.name %></p></li>
-      </ul>
-    </div>
+<br>
+<h2>Thanks for booking with us, <%= @booking.user.name %></h2>
+<h4>Here are the details of your booking:</h4>
+<div class="card">
+  <div class="bookingsubcard">
+  <div class="bookingboxleft">
+
+    <%= cl_image_tag @booking.item.photo, height: 100, width: 100, crop: :fill, class:"bookingimage"%>
+    <p><%= @booking.item.description %></p>
+    <p><%= @booking.item.price_per_day %>€</p>
+    <p>contact person : <%= @booking.item.owner.name %></p>
+
   </div>
 
-  <div class="call2action">
-    <div class="btn dashboard">
-      <%= link_to "go to my dashboard", user_path(@user), class: "btn btn-light" %>
-    </div>
+  <div class="bookingboxright">
+    <div class="bookingbuttonsflex">
 
-    <div class="btn review">
-      <%= link_to "leave a review", new_user_booking_review_path(@user, @booking), class: "btn-btn-light" %>
-    </div>
-  </div>
-
-  <%= @booking.reviews %>
+      <div>
+        <button class="custom-btn btn-5 "><span><%= link_to "to dashboard", user_path(@user), class:"indexlink" %></span>
+        </button>
+      </div>
+      <div>
+        <button class="custom-btn btn-5 "><span><%= link_to "leave a review", new_user_booking_review_path(@user, @booking), class:"indexlink" %></span>
+        </button>
+      </div>
 </div>
+    </div>
+</div>
+</div>
+
+<div class="card reviewcard">
+  <% unless @booking.reviews.nil? %>
+  <h4>Your review for this booking</h4>
+  <% @booking.reviews.each do |review| %>
+  <%= review.description %>
+  <% end %>
+  <% end %>
+</div>
+
+
+

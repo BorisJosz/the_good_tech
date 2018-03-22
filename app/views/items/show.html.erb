@@ -26,20 +26,18 @@
 
 
 <% if @show_review %>
-   <h2>Reviews</h2>
-    <div class="cardreview">
-      <% @bookings.each do |booking|  %>
+  <h2>Reviews</h2>
+  <div class="cardreview">
+    <% @bookings.each do |booking|  %>
       <% booking.reviews.each do |review| %>
         <li><%= review.description %></li>
-        <% end %>
       <% end %>
-    </div>
-    <% else %>
-        <h2>Reviews</h2>
-        <br>
-      <div class="cardreview">
-        <h4>No review yet for this item.</h4>
-      </div>
     <% end %>
-
-</div>
+  </div>
+<% else %>
+  <h2>Reviews</h2>
+  <br>
+  <div class="cardreview">
+    <h4>No review yet for this item.</h4>
+  </div>
+<% end %>
