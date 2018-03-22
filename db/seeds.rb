@@ -9,6 +9,7 @@ require 'faker'
 
 10.times do
  user  = User.all.sample
+ p "hello"
 Item.create!(
   { owner: user,
     category: "computers",
@@ -21,6 +22,7 @@ end
 
 10.times do
  user  = User.all.sample
+ p "is it me you looking for"
 Item.create!(
   { owner: user,
     category: "cameras",
@@ -33,6 +35,7 @@ end
 
 10.times do
  user  = User.all.sample
+ p "i can see it in your eyes"
 Item.create!(
   { owner: user,
     category: "drones",
