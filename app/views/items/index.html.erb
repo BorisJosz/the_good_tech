@@ -1,24 +1,12 @@
 <h1>These are our categories</h1>
 
 
-<div class="categories container">
-  <div class="row">
     <% @categories.each do |category| %>
-
-    <div class="col-xs-12 col-sm-6 col-lg-4">
-      <div class="category-card">
-       <div>
         <%= link_to category, root_path(filter: category), class: "category-link" %>
-      </div>
-      <div>
         <%= image_tag ("#{category}.png"), class: "category-img" %>
-      </div>
-    </div>
-  </div>
-
   <% end %>
-</div>
-</div>
+
+
 
 <% unless params[:filter].nil? %>
 <% @items.each do |item| %>
