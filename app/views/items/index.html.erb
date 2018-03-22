@@ -5,9 +5,14 @@
     <br>
     <h1>The Good Tech</h1>
     <br>
+    <div class="text-center">
+    <%= image_tag "logo.png", height: 80 %>
+    </div>
     <h2>Need a specific tech item for a few days?</h2>
-    <br>
+ <br>
+      <br>
     <a href="#S1">
+
     <div class="btn btn-medium">check our offer below</div>
     </a>
   </div>
@@ -19,15 +24,30 @@
 <br>
 <div class="container">
   <div class="row">
+
     <% @categories.each do |category| %>
+    <%= link_to root_path(filter: category) + '#S2' do %>
     <div class="col-xs-12 col-sm-6 col-lg-4">
-      <div class="category-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('assets/<%= category %>.png');">
-        <%= link_to category, root_path(filter: category), class: "category-link" %>
+
+      <div class="category-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('assets/<%= category %>.png');">
+
+        <div class="category-link">
+
+          <h2><%= category %> </h2>
+
+        </div>
       </div>
+
     </div>
+
+    <% end %>
     <% end %>
   </div>
 </div>
+
+<br>
+<hr class = "linecolor" id="S2">
+<br>
 
 <div class="row">
 
@@ -36,7 +56,7 @@
   <%= link_to item_path(item) do %>
 
 <div class="col-xs-12 col-sm-3">
-  <div class="card indexcard">
+  <div class="card indexcard" >
     <div>
       <%= cl_image_tag item.photo, class:"indeximage" %>
     </div>
