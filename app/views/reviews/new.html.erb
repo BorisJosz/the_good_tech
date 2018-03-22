@@ -1,7 +1,7 @@
-<h1>Add a new review</h1>
+<h3>Your opinion matters!</h3>
 
 <div class="container">
-<h1>Let's make a new review</h1>
+<h4>Give your feedback about <%= @item.description %></h4>
 <%= simple_form_for [@user, @booking, @review] do |f| %>
   <%= f.input :description %>
   <%= f.input :stars %>

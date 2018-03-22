@@ -9,9 +9,9 @@ require 'faker'
 
 10.times do
  user  = User.all.sample
- p "is it me you looking for"
 Item.create!(
   { owner: user,
+    title: Faker::Dog.breed,
     category: "cameras",
     description: Faker::Lorem.sentence(3),
     price_per_day: Faker::Number.number(2).to_i,
@@ -22,10 +22,23 @@ end
 
 10.times do
  user  = User.all.sample
- p "i can see it in your eyes"
 Item.create!(
   { owner: user,
+    title: Faker::Dog.breed,
     category: "drones",
+    description: Faker::Lorem.sentence(3),
+    price_per_day: Faker::Number.number(2).to_i,
+    address: Faker::Address.street_address,
+    remote_photo_url: "https://picsum.photos/200/300/?random"
+    })
+end
+
+10.times do
+ user  = User.all.sample
+Item.create!(
+  { owner: user,
+    title: Faker::Dog.breed,
+    category: "televisions",
     description: Faker::Lorem.sentence(3),
     price_per_day: Faker::Number.number(2).to_i,
     address: Faker::Address.street_address,

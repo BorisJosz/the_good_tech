@@ -1,22 +1,27 @@
 class ReviewsController < ApplicationController
   def index
     @item = Item.find(params[:item_id])
-    @user = User.find(params[:user_id])
+    @user = current_user
     @reviews = Review.all
   end
 
   def new
-    @review = Review.new
     @booking = Booking.find(params[:booking_id])
-    @user = User.find(params[:user_id])
+    @item = @booking.item
+    @user = current_user
+    @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
     @review.booking = Booking.find(params[:booking_id])
-    @review.user = User.find(params[:user_id])
-    @review.save
-    redirect_to user_booking_path(@review.user, @review.booking)
+    @review.user = current_user
+    if @review.save
+      redirect_to user_booking_path(@review.user, @review.booking)
+    else
+      flash[:error] = "Errrrrr"
+      redirect_to user_bookings_path(current_user.id)
+    end
   end
 
   private

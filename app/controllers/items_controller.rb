@@ -27,6 +27,11 @@ class ItemsController < ApplicationController
 
   def show
     @bookings = @item.bookings
+    @show_review = false
+    @bookings.each do |booking|
+        @show_review = true unless booking.reviews.empty?
+    end
+
   end
 
   def edit
@@ -47,7 +52,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:category, :price_per_day, :description, :address, :photo)
+    params.require(:item).permit(:category, :price_per_day, :description, :address, :photo, :title)
   end
 
   def set_item
