@@ -14,6 +14,7 @@
       <p><b>Category</b> <%= @item.category %></p>
       <p><b>Description</b> <%= @item.description %></p>
       <p><b>Adress</b> <%= @item.address %></p>
+
 <br>
 <br>
 <br>
@@ -23,6 +24,8 @@
   </div>
   </div>
 
+
+<% if @show_review %>
    <p>Reviews</p>
     <div class="cardreview">
       <% @bookings.each do |booking|  %>
@@ -31,4 +34,12 @@
         <% end %>
       <% end %>
     </div>
+    <% else %>
+      <div class="cardreview">
+        <h4>Reviews</h4>
+        <br>
+        <p>No review yet for this item.</p>
+      </div>
+    <% end %>
+
 </div>

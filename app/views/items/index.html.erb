@@ -1,7 +1,20 @@
-<div class="banner">
-</div>
 
-<h1>Our Selection :</h1>
+<div class="banner" >
+
+  <div class="banner-content">
+    <br>
+    <h1>The Good Tech</h1>
+    <br>
+    <h2>Need a specific tech item for a few days?</h2>
+    <br>
+    <a href="#S1">
+    <div class="btn btn-medium">check our offer below</div>
+    </a>
+  </div>
+
+</div>
+<div id="S1", class="container"></div>
+<br>
 <br>
 <br>
 <div class="container">
@@ -18,9 +31,9 @@
 
 <div class="row">
 
-<% unless params[:filter].nil? %>
-<% @items.each do |item| %>
-<%= link_to item_path(item) do %>
+  <% unless params[:filter].nil? %>
+  <% @items.each do |item| %>
+  <%= link_to item_path(item) do %>
 
 <div class="col-xs-12 col-sm-3">
   <div class="card indexcard">
@@ -36,7 +49,5 @@
 <% end %>
    <% end %>
 
-<% end %>
-  </div>
-
-
+  <% end %>
+</div>
