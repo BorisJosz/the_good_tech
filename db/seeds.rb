@@ -9,19 +9,6 @@ require 'faker'
 
 10.times do
  user  = User.all.sample
- p "hello"
-Item.create!(
-  { owner: user,
-    category: "computers",
-    description: Faker::Lorem.sentence(3),
-    price_per_day: Faker::Number.number(2).to_i,
-    address: Faker::Address.street_address,
-    remote_photo_url: "https://picsum.photos/200/300/?random"
-    })
-end
-
-10.times do
- user  = User.all.sample
  p "is it me you looking for"
 Item.create!(
   { owner: user,
