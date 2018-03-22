@@ -10,6 +10,7 @@
   position: fixed;
   top: 54px; /* Hide the navbar x px outside of the top view */
   width: 100%;
+  z-index: 1000;
 }
 
 .subnavbar-wagon-item {

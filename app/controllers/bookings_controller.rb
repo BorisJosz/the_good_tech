@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
   def show
     @user = current_user
     @booking = Booking.find(params[:id])
-
   end
 
   def new
@@ -22,7 +21,6 @@ class BookingsController < ApplicationController
     @booking.item = Item.find(params[:item_id])
     if @booking.save
       redirect_to user_booking_path(current_user, @booking)
-
     else
       render :new
     end
@@ -30,5 +28,4 @@ class BookingsController < ApplicationController
 
   def delete
   end
-
 end

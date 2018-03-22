@@ -5,32 +5,32 @@
       <%= cl_image_tag @booking.item.photo, height: 150, width: 200, crop: :fill %>
     </div>
     <div class="booking-text">
-    <ul>
-      <li><%= @booking.item.description %></li>
-      <li><%= @booking.item.price_per_day %>€</li>
-      <li><p>contact person : <%= @booking.item.owner.name %></p></li>
-    </ul>
-  </div>
-</div>
-
-<div class="call2action">
-  <div class="btn dashboard">
-    <button type="button" class="btn btn-info"><%= link_to "go to my dashboard", user_path(@user) %></button>
+      <ul>
+        <li><%= @booking.item.description %></li>
+        <li><%= @booking.item.price_per_day %>€</li>
+        <li><p>contact person : <%= @booking.item.owner.name %></p></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="btn review">
-    <button type="button" class="btn btn-info"><%= link_to "leave a review", new_user_booking_review_path(@user, @booking) %></button>
-  </div>
-</div>
+  <div class="call2action">
+    <div class="btn dashboard">
+      <%= link_to "go to my dashboard", user_path(@user), class: "btn btn-light" %>
+    </div>
 
-<div class="your review">
-  <h4>Your review for this product</h4>
-  <% @booking.reviews.each do |review| %>
-    <ul class = "list-inline">
-      <li> <%= review.stars %> </li>
-      <li> <%= review.description %> </li>
-    </ul>
-  <% end %>
-</div>
+    <div class="btn review">
+      <%= link_to "leave a review", new_user_booking_review_path(@user, @booking), class: "btn-btn-light" %>
+    </div>
+  </div>
+
+  <div class="your review">
+    <h4>Your review for this product</h4>
+    <% @booking.reviews.each do |review| %>
+      <ul class = "list-inline">
+        <li> <%= review.stars %> </li>
+        <li> <%= review.description %> </li>
+      </ul>
+    <% end %>
+  </div>
 
 </div>

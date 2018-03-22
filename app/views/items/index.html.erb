@@ -1,37 +1,60 @@
-<h1>These are our categories</h1>
+<div class="banner">
 
 
-<div class="categories container">
+
+</div>
+
+
+
+
+<h1>Our Selection :</h1>
+<br>
+<br>
+<div class="container">
   <div class="row">
     <% @categories.each do |category| %>
-
     <div class="col-xs-12 col-sm-6 col-lg-4">
-      <div class="category-card">
-       <div>
+      <div class="category-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('assets/<%= category %>.png');">
+
+
         <%= link_to category, root_path(filter: category), class: "category-link" %>
-      </div>
-      <div>
-        <%= image_tag ("#{category}.png"), class: "category-img" %>
+
       </div>
     </div>
+    <% end %>
   </div>
+</div>
 
-  <% end %>
-</div>
-</div>
+
 
 <% unless params[:filter].nil? %>
+
+<div class="row">
 <% @items.each do |item| %>
-<ul>
-  <a><%= link_to item_path(item) do %>
-   <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
-   <li><%= item.category %></li>
-   <li>Description = <%= item.description %></li>
+
+
+<%= link_to item_path(item) do %>
+
+<div class="col-xs-12 col-sm-4">
+<div class="card indexcard">
+  <div class="imagediv">
+
+      <%= cl_image_tag item.photo, class: "indeximage" %>
+
+        </div>
+    <p class= "indexlink" ><%= item.category %></p>
+    <p class= "indexlink" >Description = <%= item.description %></p>
+
+     </div>
+</div>
+
+<% end %>
+
+
+   <% end %>
+   </div>
+
    <% end %>
 
- </a>
- <br>
- <br>
-</ul>
-<% end %>
-<% end %>
+
+
