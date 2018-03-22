@@ -2,9 +2,20 @@
 
 // For example:
 $red: #EE5F5B;
-$blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
 $gray: #000000;
-$light-gray: #F4F4F4;
+/* Coolors Exported Palette - coolors.co/e6e8e6-ced0ce-4392f1-f15025-191919 */
+
+/* HSL */
+$light-gray: hsla(120%, 4%, 91%, 1);
+$pastel-gray: hsla(120%, 2%, 81%, 1);
+$blue: hsla(213%, 86%, 60%, 1);
+$black: hsla(0%, 0%, 10%, 1);
+
+/* RGB */
+$light-gray: rgba(230, 232, 230, 1);
+$pastel-gray: rgba(206, 208, 206, 1);
+$blue: rgba(67, 146, 241, 1);
+$black: rgba(25, 25, 25, 1);
