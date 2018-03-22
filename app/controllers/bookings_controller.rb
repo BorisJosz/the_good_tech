@@ -12,14 +12,15 @@ class BookingsController < ApplicationController
 
   def new
     @item = Item.find(params[:item_id])
+    @user = current_user
     @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new
+    @booking = Booking.new(params[:id])
     @booking.user = current_user
     @booking.item = Item.find(params[:item_id])
-    if @booking.save
+    if @booking.save!
       redirect_to user_booking_path(current_user, @booking)
     else
       render :new

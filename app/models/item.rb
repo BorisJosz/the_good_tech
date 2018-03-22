@@ -8,6 +8,7 @@ class Item < ApplicationRecord
   validates :price_per_day, presence: true
   validates :description,   presence: true
   validates :photo,         presence: true
+  validates :title,         presence: true
 
   CATEGORIES = ["Computers", "Cameras", "Drones", "Televisions", "Sound Gear", "Smartphones"]
 
