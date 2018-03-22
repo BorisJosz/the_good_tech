@@ -28,19 +28,33 @@
 
 
 <% unless params[:filter].nil? %>
+
+<div class="row">
 <% @items.each do |item| %>
-<ul>
-  <a><%= link_to item_path(item) do %>
-   <%= cl_image_tag item.photo, height: 100, width: 100, crop: :fill %>
-   <li><%= item.category %></li>
-   <li>Description = <%= item.description %></li>
+
+
+<%= link_to item_path(item) do %>
+
+<div class="col-xs-12 col-sm-4">
+<div class="card indexcard">
+  <div class="imagediv">
+
+      <%= cl_image_tag item.photo, class: "indeximage" %>
+
+        </div>
+    <p class= "indexlink" ><%= item.category %></p>
+    <p class= "indexlink" >Description = <%= item.description %></p>
+
+     </div>
+</div>
+
+<% end %>
+
+
+   <% end %>
+   </div>
+
    <% end %>
 
- </a>
- <br>
- <br>
-</ul>
-<% end %>
-<% end %>
 
 
