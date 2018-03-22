@@ -1,10 +1,29 @@
-<h1>These are our categories</h1>
+<div class="banner">
 
 
+
+</div>
+
+
+
+
+<h1>Our Selection :</h1>
+<br>
+<br>
+<div class="container">
+  <div class="row">
     <% @categories.each do |category| %>
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <div class="category-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('assets/<%= category %>.png');">
+
+
         <%= link_to category, root_path(filter: category), class: "category-link" %>
-        <%= image_tag ("#{category}.png"), class: "category-img" %>
-  <% end %>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 
 
@@ -23,3 +42,5 @@
 </ul>
 <% end %>
 <% end %>
+
+
