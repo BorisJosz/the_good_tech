@@ -4,12 +4,17 @@
 <div class="card">
   <div class="bookingsubcard">
   <div class="bookingboxleft">
+    <div class="bookingsubfour">
 
     <%= cl_image_tag @booking.item.photo, height: 100, width: 100, crop: :fill, class:"bookingimage"%>
+
+    </div>
+
+  <div class="bookingsubfive">
     <p><%= @booking.item.description %></p>
     <p><%= @booking.item.price_per_day %>€</p>
     <p>contact person : <%= @booking.item.owner.name %></p>
-
+</div>
   </div>
 
   <div class="bookingboxright">

@@ -41,14 +41,12 @@
   color: black;
 }
 
-.bookingimage {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+
 
 .bookingboxleft {
   flex: 1 1 40%;
   border-right: 1px solid black;
+  display: flex;
 }
 
 .bookingboxright {
@@ -101,3 +99,12 @@
 .bookingsubthree {
   flex: 1 0 20%;
 }
+
+.bookingsubfour {
+  flex: 1 0 30%;
+}
+
+.bookingsubfive {
+  flex: 1 0 70%;
+}
+

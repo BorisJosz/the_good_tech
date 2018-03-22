@@ -23,7 +23,7 @@
 
 <h3>Here are your bookings</h3>
 
-
+<%= link_to user_booking_path(@booking) do %>
 <div class="card dashboardcard">
   <% @bookings.each do |booking| %>
   <div class="bookingsubcard">
@@ -44,7 +44,7 @@
 </div>
 
 
-
+<% end %>
 
 
 
