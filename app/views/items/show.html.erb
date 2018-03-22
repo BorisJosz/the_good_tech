@@ -1,13 +1,16 @@
 <br>
-<div class="container show">
-  <p>Overview of the item</p>
+  <h2>Overview of the item</h2>
 
   <div class="card">
-    <div class="cardpicture"><%= cl_image_tag @item.photo, height: 300, width: 400, crop: :fill %>
+    <div class="subboxleft">
+      <div class="imagediv">
+      <%= cl_image_tag @item.photo, height: 400, width: 400, crop: :fill %>
+      </div>
     </div>
 
-    <div class="cardinfo">
+    <div class="subboxright">
       <h4><b>Object description</b></h4>
+      <br>
       <p><b>Category</b> <%= @item.category %></p>
       <p><b>Description</b> <%= @item.description %></p>
       <p><b>Adress</b> <%= @item.address %></p>
@@ -23,4 +26,3 @@
         <% end %>
       <% end %>
     </div>
-</div>
