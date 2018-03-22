@@ -17,11 +17,12 @@ class ReviewsController < ApplicationController
     @review.booking = Booking.find(params[:booking_id])
     @review.user = current_user
     if @review.save
-      redirect_to user_booking_path(@review.user, @review.booking)
+      redirect_to user_booking_path(current_user)
     else
       flash[:error] = "Errrrrr"
-      redirect_to user_bookings_path(current_user.id)
+      redirect_to user_booking_path(current_user)
     end
+
   end
 
   private
