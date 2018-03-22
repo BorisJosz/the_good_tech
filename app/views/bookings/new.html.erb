@@ -1,5 +1,3 @@
-
-
 <br>
   <h2>Please confirm your booking for <%= @item.title%></h2>
 <div class="card">
@@ -25,7 +23,7 @@
 
 
       <%= simple_form_for [@item, @booking] do |f| %>
-        <%= f.submit "All is correct" %>
+        <%= f.submit "All is correct", class:"custom-btn btn-5" %>
       <% end %>
 
 
