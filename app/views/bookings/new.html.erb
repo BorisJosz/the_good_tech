@@ -1,14 +1,38 @@
-<h1>Bookings#new</h1>
-<ul>
-<li><%= @item.category %></li>
-<li><%= @item.description %></li>
-<li><%= @item.address %></li>
-<li><%= @item.price_per_day %> €</li>
-</ul>
-<br>
-<br>
-<br>
-<%= simple_form_for [@item, @booking] do |f| %>
 
-  <%= f.submit "Confirm booking", class: "btn btn-primary" %>
-<% end %>
+
+<br>
+  <h2>Please confirm your booking for <%= @item.title%></h2>
+<div class="card">
+  <div class="subcard">
+    <div class="subboxleft">
+      <div class="imagediv">
+      <%= cl_image_tag @item.photo, height: 400, width: 400, crop: :fill %>
+      </div>
+    </div>
+
+    <div class="subboxright">
+      <h3><b><%=@item.title.capitalize%></b></h3>
+      <br>
+      <p><b>Category - </b> <%= @item.category %></p>
+      <p><b>Description - </b> <%= @item.description %></p>
+      <p><b>Address - </b> <%= @item.address %></p>
+      <p><b>Price per day - </b> <%= @item.price_per_day %> €</p>
+      <p><b>You're renting it from <%= @item.owner.name %></p>
+      <br>
+      <br>
+
+      <div><button class="custom-btn btn-5 "><span>
+
+
+      <%= simple_form_for [@item, @booking] do |f| %>
+        <%= f.submit "All is correct" %>
+      <% end %>
+
+
+        </span></button>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
