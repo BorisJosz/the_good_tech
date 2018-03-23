@@ -114,11 +114,11 @@
 
 .itembuttonbox {
   display: flex;
-  align-items : center;
+  justify-content: center;
 }
 
-.custom-btn_btn-5 {
-  align-items: center;
-  justify-content: center;
-  margin : 0 auto;
+.backbutton {
+  justiy-content: center;
+  align-items : space-around;
+  margin : 50px;
 }
