@@ -8,15 +8,15 @@
 require 'faker'
 
 user = User.new
-user.email = 'test@example.com'
+user.email = 'tasasasdast@example.com'
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
 user.remote_photo_url = "https://picsum.photos/200/300/?random"
 user.name = "Billy Bob"
 user.save!
-
+Review.destroy_all
+Booking.destroy_all
 Item.destroy_all
-
 
 user  = User.all.sample
 Item.create!(
