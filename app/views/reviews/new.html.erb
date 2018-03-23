@@ -1,6 +1,7 @@
 <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 <h3>Your opinion matters!</h3>
 
+
   <div class="card logincard">
   <h4>Give your feedback about <%= @item.title %></h4>
   <%= simple_form_for [@user, @booking, @review] do |f| %>
@@ -13,5 +14,6 @@
           </button>
   <% end %>
   </div>
+
 </div>
 
