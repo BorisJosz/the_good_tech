@@ -6,7 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-
+user = User.new
+user.email = 'test@example.com'
+user.password = 'valid_password'
+user.password_confirmation = 'valid_password'
+user.remote_photo_url = "https://picsum.photos/200/300/?random"
+user.name = "Billy Bob"
+user.save!
+Item.destroy_all
 10.times do
  user  = User.all.sample
 Item.create!(
