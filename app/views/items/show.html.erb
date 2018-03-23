@@ -28,7 +28,7 @@
 <% if @show_review %>
   <h2>Reviews</h2>
   <div class="cardreview">
-    <% @bookings.each do |booking|  %>
+    <% @bookings.each do |booking| %>
       <% booking.reviews.each do |review| %>
         <li><%= review.description %></li>
       <% end %>

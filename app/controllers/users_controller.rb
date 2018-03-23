@@ -6,4 +6,7 @@ class UsersController < ApplicationController
     @booking = Booking.find(params[:id])
     @items = @user.items
   end
+
+private
+
 end
