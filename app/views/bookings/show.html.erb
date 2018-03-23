@@ -34,7 +34,7 @@
 </div>
 
 <div class="card reviewcard">
-  <% unless @booking.reviews.nil? %>
+
   <h4>Your review for this booking</h4>
   <br>
   <% @booking.reviews.each do |review| %>
@@ -48,7 +48,7 @@
       -    <%= review.description %>
 </h5>
   <% end %>
-  <% end %>
+
 </div>
 
 
