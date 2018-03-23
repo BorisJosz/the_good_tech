@@ -18,19 +18,36 @@
 <br>
 <br>
 <br>
-      <div><button class="custom-btn btn-5 "><span><%= link_to "Book this item", new_item_booking_path(@item), class:"indexlink" %></span></button>
+      <div class="itembuttonbox">
+        <div><button class="custom-btn btn-5 "><span><%= link_to "Back to category", root_path(filter: @item.category) + '#S2', class:"indexlink" %></span></button>
+        </div>
+
+        <div><button class="custom-btn btn-5 "><span><%= link_to "Book this item", new_item_booking_path(@item), class:"indexlink" %></span></button>
+        </div>
       </div>
+
+
+
+
     </div>
   </div>
   </div>
 
 
 <% if @show_review %>
-  <h2>Reviews</h2>
+  <h2>Reviews for this item</h2>
   <div class="cardreview">
     <% @bookings.each do |booking| %>
       <% booking.reviews.each do |review| %>
-        <li><%= review.description %></li>
+        <h5>
+ <% review.stars.times do %>
+  <i class="fas fa-star"></i>
+  <% end %>
+  <% (5 - review.stars).times do %>
+  <i class="far fa-star"></i>
+  <% end %>
+      -    <%= review.description %>
+</h5>
       <% end %>
     <% end %>
   </div>
