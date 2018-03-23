@@ -7,18 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 user = User.new
-user.email = 'test@example.com'
+user.email = 'tasasasdast@example.com'
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
 user.remote_photo_url = "https://picsum.photos/200/300/?random"
 user.name = "Billy Bob"
 user.save!
+Review.destroy_all
+Booking.destroy_all
 Item.destroy_all
 10.times do
  user  = User.all.sample
 Item.create!(
   { owner: user,
-    title: Faker::Dog.breed,
+    title: Faker::Company.bs,
     category: "cameras",
     description: Faker::Lorem.sentence(3),
     price_per_day: Faker::Number.number(2).to_i,
@@ -31,7 +33,7 @@ end
  user  = User.all.sample
 Item.create!(
   { owner: user,
-    title: Faker::Dog.breed,
+    title: Faker::Company.bs,
     category: "drones",
     description: Faker::Lorem.sentence(3),
     price_per_day: Faker::Number.number(2).to_i,
@@ -44,7 +46,7 @@ end
  user  = User.all.sample
 Item.create!(
   { owner: user,
-    title: Faker::Dog.breed,
+    title: Faker::Company.bs,
     category: "televisions",
     description: Faker::Lorem.sentence(3),
     price_per_day: Faker::Number.number(2).to_i,
