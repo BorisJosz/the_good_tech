@@ -26,7 +26,7 @@
 <div class="card dashboardcard">
   <% @bookings.each do |booking| %>
     <%= link_to user_booking_path(current_user, booking) do %>
-      <div class="bookingsubcard">
+      <div class="bookingsubcarddash">
         <div class="bookingsubone text-center">
           <%= cl_image_tag booking.item.photo, height: 80, width: 80, crop: :fill %>
         </div>
