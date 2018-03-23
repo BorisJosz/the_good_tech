@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20180322163739) do
     t.string "photo"
     t.float "latitude"
     t.float "longitude"
+    t.string "title"
     t.index ["owner_id"], name: "index_items_on_owner_id"
   end
 

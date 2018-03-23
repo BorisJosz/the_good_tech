@@ -5,22 +5,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
-  box-shadow: 2px 2px 4px #323332;
+  margin: 25px;
+  /*box-shadow: 2px 2px 4px #323332;*/
   &:hover {
     opacity: 0.8;
-    transition: 0,6s ease;
-    margin-top: -10px;
+    transition: 0.6s easeIn;
+    transform: translateY(-10px);
   }
 }
 
 .category-link {
   font-size: 32px;
   color: white;
-  text-shadow: 2px 2px #323332;
+  /*text-shadow: 2px 2px #323332;*/
   &:hover {
-    color: #EA5E24;
+    color: white;
     text-decoration: none;
-    text-shadow: 2px 2px white;
   }
+}
+
+.linecolor {
+  border-top: 1px solid black;
 }

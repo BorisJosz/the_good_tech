@@ -1,13 +1,14 @@
 class Item < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
-  belongs_to :owner, class_name: 'User'
+  belongs_to :owner, class_name: 'User', optional: true
   has_many :bookings
 
   validates :category,      presence: true
   validates :price_per_day, presence: true
   validates :description,   presence: true
   validates :photo,         presence: true
+  validates :title,         presence: true
 
   CATEGORIES = ["Computers", "Cameras", "Drones", "Televisions", "Sound Gear", "Smartphones"]
 
