@@ -14,27 +14,16 @@ user.password_confirmation = 'valid_password'
 user.remote_photo_url = "https://picsum.photos/200/300/?random"
 user.name = "Billy Bob"
 user.save!
-<<<<<<< HEAD
 Review.destroy_all
 Booking.destroy_all
-=======
-
->>>>>>> 3805df5835a6a16aa8e82c245b01f94bbbf69e8f
 Item.destroy_all
-
 
 user  = User.all.sample
 Item.create!(
   { owner: user,
-<<<<<<< HEAD
-    title: Faker::Company.bs,
-    category: "cameras",
-    description: Faker::Lorem.sentence(3),
-=======
     title: "Macbook Retina",
     category: "computers",
     description: "good condition, lots of hard drive space available! (great screen)",
->>>>>>> 3805df5835a6a16aa8e82c245b01f94bbbf69e8f
     price_per_day: Faker::Number.number(2).to_i,
     address: Faker::Address.street_address,
     remote_photo_url: "https://cnet1.cbsistatic.com/img/XR0J6GluxRic39usA-LQ3iYdqJI=/830x467/2012/06/12/ea70daa9-0541-11e3-bf02-d4ae52e62bcc/Macbook_Pro_2012_with_Retina_Display_35331572_05.jpg"
@@ -43,17 +32,10 @@ Item.create!(
 
 user2  = User.all.sample
 Item.create!(
-<<<<<<< HEAD
-  { owner: user,
-    title: Faker::Company.bs,
-    category: "drones",
-    description: Faker::Lorem.sentence(3),
-=======
   { owner: user2,
     title: "Dell 250gb",
     category: "computers",
     description: "250gb hard drive, 2gb ram, intel i7 2,2GHz",
->>>>>>> 3805df5835a6a16aa8e82c245b01f94bbbf69e8f
     price_per_day: Faker::Number.number(2).to_i,
     address: Faker::Address.street_address,
     remote_photo_url: "https://assets.pcmag.com/media/images/499245-dell-inspiron-small-desktop-pc.jpg?thumb=y&width=810&height=456"
@@ -61,17 +43,10 @@ Item.create!(
 
 user3  = User.all.sample
 Item.create!(
-<<<<<<< HEAD
-  { owner: user,
-    title: Faker::Company.bs,
-    category: "televisions",
-    description: Faker::Lorem.sentence(3),
-=======
   { owner: user3,
     title: "Dell portable computer",
     category: "computers",
     description: "No problems with Office suite",
->>>>>>> 3805df5835a6a16aa8e82c245b01f94bbbf69e8f
     price_per_day: Faker::Number.number(2).to_i,
     address: Faker::Address.street_address,
     remote_photo_url: "https://images.techhive.com/images/article/2015/08/07-dell-1-100607123-orig.jpg"
