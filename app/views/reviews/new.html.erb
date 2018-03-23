@@ -1,7 +1,7 @@
 <h3>Your opinion matters!</h3>
 
 <div class="card">
-<h4>Give your feedback about <%= @item.description %></h4>
+<h4>Give your feedback about <%= @item.descrpiption %></h4>
 <%= simple_form_for [@user, @booking, @review] do |f| %>
   <%= f.input :description %>
   <%= f.input :stars %>
